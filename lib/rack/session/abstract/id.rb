@@ -392,7 +392,7 @@ module Rack
         # Should return a new session id or nil if options[:drop]
 
         def delete_session(req, sid, options)
-          raise '#delete_session not implemented'
+          destroy_session req.env, sid, options
         end
       end
 
